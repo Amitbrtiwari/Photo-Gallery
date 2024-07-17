@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        * {
+            background-color: white;
+        }
+        h1 {
+            color:cadetblue;
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXaLKkBhq5u5eswdtvv9UPpQVvVvBux9iFtg&s);
+            height: 50vh;
+            background-repeat: no-repeat;
+            background-size: cover; /* Or use contain if you prefer */
+        }
+        .nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: rgb(31, 27, 32);
+        }
+        #btn {
+            text-align: center;
+            border-radius: 8px;
+            background-color: rgb(151, 51, 51);
+            padding: 5px;
+        }
+        h3 {
+            padding: 10px;  
+            border-radius: 8px;
+        }
+        h3:hover{
+            background-color: rgb(90, 96, 184);
+        }
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            grid-template-rows: auto auto;
+        }
+        .container img {
+            height: 120px;
+            width: 120px;
+            transition: all 5s;
+        }
+        .container img:active {
+            transform: scale(5);
+        }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <h3>Backup Gallery</h3>
+        <form>
+            <input id="btn" type="button" value="Download Now!">
+        </form>
+    </div>
+    <h1 style="text-align:center">Images with Subtitles</h1>
+    <p> Later we will add arms and aircrat details. <br> Team will add deep comparisions of diffrent forces</p>
+    <div class="container">
+        <div class="item item1">
+            <img src="https://qph.cf2.quoracdn.net/main-qimg-11f92a825ede708712ff35699a9ab500-lq" alt="">
+            <h5>Trishul</h5>
+        </div>
+        <div class="item item2">
+            <img src="https://img-new.cgtrader.com/items/110991/6fda79f810/large/condor-i-missile-3d-model-low-poly-obj-3ds-fbx-dxf-blend-dae.jpg" alt="">
+            <h5>Condor-I Missile</h5>
+        </div>
+        <div class="item item3">
+            <img src="https://assets.flatpyramid.com/wp-content/uploads/uploads/3d-models/images/weapons_3d_models/israeli-silver-sparrow-missile-3d-model-150664.jpg" alt="">
+            <h5>Israeli Silver Sparrow Missile</h5>
+        </div>
+        <div class="item item4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/20/AGM-84_Harpoon_launched_from_USS_Leahy_%28CG-16%29.jpg" alt="">
+            <h5>Anti-ship Missile</h5>
+        </div>
+        <div class="item item5">
+            <img src="https://nationalinterest.org/sites/default/files/styles/hero-960w/public/main_images/IWI-ACE-N-22-5_56mm-NATO-Magazine-1.jpg?itok=nLv1bvZ9" alt="">
+            <h5>FN FAL Rifle</h5>
+        </div>
+        <div class="item item6">
+            <img src="https://warriormaven.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTkxMzEzOTYzNDQ5ODUzNDcz/f-35.jpg" alt="">
+            <h5>Warrior Maven</h5>
+        </div>
+        <div class="item item7">
+            <img src="https://www.cnet.com/a/img/resize/f71eaa443a63421152b1637200209912809db4e2/hub/2016/08/19/78fdf991-2c87-4644-a3fc-6c582bc0d4d1/cnet-f-15e-afghanistan.jpg?auto=webp&width=1200" alt="">
+            <h5>The 16 Fastest Combat</h5>
+        </div>
+        <div class="item item8">
+            <img src="https://i.ytimg.com/vi/NpjSPuGOpe4/maxresdefault.jpg" alt="">
+            <h5>F-16 Falcon Fighter</h5>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("btn").addEventListener("click", function() {
+                window.print();
+            });
+        });
+    </script>
+</body>
+</html>
